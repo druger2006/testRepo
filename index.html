@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      image {
+      #image {
         display: none;
       }
     </style>
   </head>
   <body>
     <img id="loader" src=".\photo.gif" alt="123" />
-    <img id="image" src=".\PFahg.png" width="800" alt="123" />
+    <img id="image" src=".\PFahg.png" width="800" alt="123" onload="myfunc()" />
+
+    <script>
+      function myfunc() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("image").style.display = "inline-block";
+      }
+    </script>
   </body>
 </html>
